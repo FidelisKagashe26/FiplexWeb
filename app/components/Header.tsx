@@ -57,13 +57,6 @@ export default function Header() {
           <span className={language === "en" ? "active" : ""}>EN</span>
         </button>
         <button
-          className="theme-switch"
-          onClick={() => setDark(!dark)}
-          aria-label={dark ? "Use light mode" : "Use dark mode"}
-        >
-          <span>{dark ? "☀" : "☾"}</span>
-        </button>
-        <button
           className="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Open navigation"

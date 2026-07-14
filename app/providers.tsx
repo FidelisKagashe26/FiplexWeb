@@ -16,23 +16,14 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>("sw");
-  const [dark, setDarkState] = useState(true);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const savedLang = localStorage.getItem("language") as Language | null;
-    const savedTheme = localStorage.getItem("theme");
     if (savedLang) setLanguageState(savedLang);
-    if (savedTheme) setDarkState(savedTheme === "dark");
     setMounted(true);
+    document.documentElement.classList.remove("dark"); // Force light mode
   }, []);
-
-  useEffect(() => {
-    if (mounted) {
-      document.documentElement.classList.toggle("dark", dark);
-      localStorage.setItem("theme", dark ? "dark" : "light");
-    }
-  }, [dark, mounted]);
 
   useEffect(() => {
     if (mounted) {
@@ -42,7 +33,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [language, mounted]);
 
   return (
-    <AppContext.Provider value={{ language, setLanguage: setLanguageState, dark, setDark: setDarkState, mounted }}>
+    <AppContext.Provider value={{ language, setLanguage: setLanguageState, dark: false, setDark: () => {}, mounted }}>
       {children}
     </AppContext.Provider>
   );

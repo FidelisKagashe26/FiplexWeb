@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-:root { --bg:#f5f7fa; --surface:#ffffff; --surface-2:#edf1f5; --ink:#101820; --muted:#5f6b76; --line:#d7dee5; --blue:#1367f2; --cyan:#27d7c4; --header:rgba(245,247,250,.86); color-scheme:light; }
-:root.dark { --bg:#070b10; --surface:#0d131a; --surface-2:#111a23; --ink:#f3f7fa; --muted:#9ba8b4; --line:#24303b; --blue:#3b82f6; --cyan:#2ee6d0; --header:rgba(7,11,16,.82); color-scheme:dark; }
+:root { --bg:#eff4f9; --surface:#f8fbff; --surface-2:#e6eff8; --ink:#0f172a; --muted:#475569; --line:#cddaf1; --blue:#2563eb; --cyan:#0891b2; --header:rgba(239,244,249,.86); color-scheme:light; }
 *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-geist-sans),Arial,sans-serif;transition:background .3s,color .3s} a{text-decoration:none;color:inherit} button{font:inherit}
 .site-shell{min-height:100vh;overflow:hidden;background:radial-gradient(circle at 82% 18%,color-mix(in srgb,var(--blue) 12%,transparent),transparent 28%),var(--bg)}
 .site-header{height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(24px,6vw,92px);position:fixed;z-index:50;inset:0 0 auto;background:var(--header);backdrop-filter:blur(18px);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
