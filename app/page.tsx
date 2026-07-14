@@ -25,7 +25,7 @@ export default function Home() {
           <div className="status-pill"><span />Code running</div>
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
-          <div className="core-node"><span className="brand-mark mini"><i /><i /><i /></span><b>FIPLEX</b><small>CONNECTED CORE</small></div>
+          <div className="core-node"><img src="/Logo.svg" alt="Fiplex Logo" style={{ height: '110px', width: 'auto', marginBottom: '2px' }} /><small>CONNECTED CORE</small></div>
           <div className="satellite satellite-a"><span>01</span><b>Web</b></div>
           <div className="satellite satellite-b"><span>02</span><b>Mobile</b></div>
           <div className="satellite satellite-c"><span>03</span><b>Desktop</b></div>
