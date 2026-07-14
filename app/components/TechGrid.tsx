@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useAppContext } from "../providers";
 
 type Category = "All" | "Web Development" | "Mobile Development" | "Desktop Development" | "Databases" | "Ideation & Design";
 
@@ -35,7 +34,6 @@ const technologies: Tech[] = [
 ];
 
 export default function TechGrid() {
-  const { language } = useAppContext();
   const [activeFilter, setActiveFilter] = useState<Category>("All");
 
   const filters: Category[] = ["All", "Web Development", "Mobile Development", "Desktop Development", "Databases", "Ideation & Design"];
@@ -44,35 +42,11 @@ export default function TechGrid() {
     ? technologies 
     : technologies.filter(tech => tech.category === activeFilter);
 
-  const title = language === "sw" ? "Teknolojia tunazotumia" : "Technologies we work with";
-  const eyebrow = language === "sw" ? "ZANA ZA KAZI" : "TOOLS OF THE TRADE";
-
-  const getFilterLabel = (filter: Category) => {
-    if (language === "en") return filter;
-    if (filter === "All") return "Zote";
-    if (filter === "Web Development") return "Web";
-    if (filter === "Mobile Development") return "Mobile";
-    if (filter === "Desktop Development") return "Desktop";
-    if (filter === "Databases") return "Database";
-    if (filter === "Ideation & Design") return "Ubunifu";
-    return filter;
-  };
-
-  const getCategoryLabel = (category: Category) => {
-    if (language === "en") return category;
-    if (category === "Web Development") return "Ubunifu wa Web";
-    if (category === "Mobile Development") return "Ubunifu wa Mobile";
-    if (category === "Desktop Development") return "Ubunifu wa Desktop";
-    if (category === "Databases") return "Database";
-    if (category === "Ideation & Design") return "Ubunifu";
-    return category;
-  };
-
   return (
     <section className="tech-section">
-      <div className="tech-header">
-        <p className="tech-eyebrow">{eyebrow}</p>
-        <h2 className="tech-title">{title}</h2>
+      <div className="section-heading">
+        <div><span className="section-index">02</span><p>Tools of the trade</p></div>
+        <h2>Technologies we work with</h2>
       </div>
 
       <div className="tech-filters">
@@ -82,14 +56,15 @@ export default function TechGrid() {
             className={`filter-btn ${activeFilter === filter ? "active" : ""}`}
             onClick={() => setActiveFilter(filter)}
           >
-            {getFilterLabel(filter)}
+            {filter}
           </button>
         ))}
       </div>
 
       <div className="tech-grid">
         {filteredTech.map((tech, index) => (
-          <div key={`${tech.name}-${index}`} className="tech-card">
+          <article key={`${tech.name}-${index}`} className="tech-card">
+            <span className="card-number">{String(index + 1).padStart(2, "0")}</span>
             <div className="tech-icon-wrapper">
               <img 
                 src={`/icons/${tech.icon}`} 
@@ -97,9 +72,9 @@ export default function TechGrid() {
                 className="tech-icon" 
               />
             </div>
-            <h3 className="tech-name">{tech.name}</h3>
-            <p className="tech-category">{getCategoryLabel(tech.category)}</p>
-          </div>
+            <h3>{tech.name}</h3>
+            <p>{tech.category}</p>
+          </article>
         ))}
       </div>
     </section>

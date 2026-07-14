@@ -1,14 +1,9 @@
 "use client";
 
-import { useAppContext } from "../providers";
-
 type DetailCopy = { label: string; title: string; intro: string; points: { title: string; text: string }[]; processTitle: string; process: string[]; ctaTitle: string; ctaText: string };
-type Props = { sw: DetailCopy; en: DetailCopy; code: string };
+type Props = { copy: DetailCopy; code: string };
 
-export default function DetailPage({ sw, en, code }: Props) {
-  const { language } = useAppContext();
-  const t = language === "sw" ? sw : en;
-
+export default function DetailPage({ copy: t, code }: Props) {
   return (
     <main className="site-shell detail-shell">
       <section className="detail-hero">
@@ -16,7 +11,7 @@ export default function DetailPage({ sw, en, code }: Props) {
         <h1>{t.title}</h1>
         <p>{t.intro}</p>
         <a className="button primary" href="#capabilities">
-          {language === "sw" ? "Angalia uwezo" : "View capabilities"}<span>↓</span>
+          View capabilities<span>↓</span>
         </a>
         <div className="detail-grid-art" aria-hidden="true">
           <i /><i /><i /><i />
@@ -59,7 +54,7 @@ export default function DetailPage({ sw, en, code }: Props) {
         <h2>{t.ctaTitle}</h2>
         <p>{t.ctaText}</p>
         <a className="button primary" href="/contact">
-          {language === "sw" ? "Zungumza na Fiplex" : "Talk to Fiplex"}<span>↗</span>
+          Talk to Fiplex<span>↗</span>
         </a>
       </section>
     </main>

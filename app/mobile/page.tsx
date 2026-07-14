@@ -10,27 +10,7 @@ export default function MobilePage() {
   return (
     <DetailPage 
       code="mobile" 
-      sw={{
-        label: "Mobile Apps", 
-        title: "Apps za Android na iOS.", 
-        intro: "Tunatengeneza mobile applications zinazofanya kazi kwenye simu za Android na iPhone kwa ubora na kasi ileile tukitumia React Native na Flutter.",
-        points: [
-          { title: "React Native", text: "Tunajenga apps zinazotumia asili ya simu (native feel) kwa kutumia mfumo huu unaoaminika na makampuni makubwa duniani." },
-          { title: "Flutter", text: "Kwa muonekano wa kuvutia na uhuishaji (animations) mzuri, tunatumia Flutter kuhakikisha app yako inaonekana vizuri kwenye kila kioo." },
-          { title: "Muunganisho (API Integration)", text: "Mobile apps zetu zinaunganishwa kwa urahisi na mifumo yako mingine kupitia APIs imara na salama." },
-          { title: "Kasi na Ubora", text: "Tunahakikisha app inafunguka haraka, haili chaji sana, na inatoa uzoefu mzuri kwa mtumiaji." }
-        ],
-        processTitle: "Hatua zetu za kujenga Mobile App.", 
-        process: [
-          "Mchoro wa muonekano (Wireframes & Prototypes)",
-          "Uandishi wa code (Development)",
-          "Majaribio kwenye simu tofauti (Beta Testing)",
-          "Kuweka app kwenye Play Store na App Store"
-        ], 
-        ctaTitle: "Je, una wazo la Mobile App?", 
-        ctaText: "Wasiliana nasi leo tukusaidie kujenga app itakayowafikia wateja wako popote walipo."
-      }} 
-      en={{
+      copy={{
         label: "Mobile Apps", 
         title: "Android & iOS Apps.", 
         intro: "We build high-performance mobile applications that work seamlessly on both Android and iPhones using React Native and Flutter.",

@@ -1,37 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { useAppContext } from "../providers";
 
-const copy = {
-  sw: {
-    nav: ["Mwanzo", "Web", "Mobile", "Desktop", "Kuhusu", "Mawasiliano"],
-  },
-  en: {
-    nav: ["Home", "Web", "Mobile", "Desktop", "About", "Contact"],
-  },
-};
+const nav = ["Home", "Web", "Mobile", "Desktop", "About", "Contact"];
+const hrefs = ["/", "/web", "/mobile", "/desktop", "/about", "/contact"];
 
 export default function Header() {
-  const { language, setLanguage, dark, setDark, mounted } = useAppContext();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // If not mounted yet, render a default skeleton or basic header to prevent hydration mismatch
-  if (!mounted) {
-    return (
-      <header className="site-header">
-        <a className="brand" href="/" aria-label="Fiplex Company Limited home">
-          <span className="brand-mark"><i /><i /><i /></span>
-          <span>FIPLEX</span>
-        </a>
-        <nav className="nav-links" aria-label="Main navigation"></nav>
-        <div className="header-actions"></div>
-      </header>
-    );
-  }
-
-  const t = copy[language];
-  const hrefs = ["/", "/web", "/mobile", "/desktop", "/about", "/contact"];
 
   return (
     <header className="site-header">
@@ -40,22 +15,13 @@ export default function Header() {
         <span>FIPLEX</span>
       </a>
       <nav className={menuOpen ? "nav-links open" : "nav-links"} aria-label="Main navigation">
-        {t.nav.map((item, index) => (
+        {nav.map((item, index) => (
           <a key={item} href={hrefs[index]} onClick={() => setMenuOpen(false)}>
             {item}
           </a>
         ))}
       </nav>
       <div className="header-actions">
-        <button
-          className="language-switch"
-          onClick={() => setLanguage(language === "sw" ? "en" : "sw")}
-          aria-label="Change language"
-        >
-          <span className={language === "sw" ? "active" : ""}>SW</span>
-          <b>/</b>
-          <span className={language === "en" ? "active" : ""}>EN</span>
-        </button>
         <button
           className="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}

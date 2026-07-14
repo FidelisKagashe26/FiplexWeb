@@ -10,27 +10,7 @@ export default function WebPage() {
   return (
     <DetailPage 
       code="web" 
-      sw={{
-        label: "Web Development", 
-        title: "Websites na Web Apps za Kisasa.", 
-        intro: "Tunatengeneza mifumo ya mtandao (web applications) inayofanya kazi kwa kasi, usalama, na ufanisi mkubwa kwa kutumia teknolojia zinazoongoza duniani kama React, Next.js, Django, na Node.",
-        points: [
-          { title: "React & Next.js", text: "Tunajenga user interfaces zenye mvuto na zinazofanya kazi haraka bila kuchelewa." },
-          { title: "Django & Node", text: "Mifumo yetu ya nyuma (backend) inatengenezwa kuwa imara na salama kwa kutumia Python (Django) na JavaScript (Node/Express)." },
-          { title: "Golang & Gin", text: "Kwa mifumo inayohitaji kuchakata data nyingi kwa wakati mmoja, tunatumia Golang kwa spidi ya hali ya juu." },
-          { title: "Vue & Angular", text: "Tuna uwezo mpana wa kutumia frameworks mbalimbali kulingana na mahitaji ya mradi wako." }
-        ],
-        processTitle: "Jinsi tunavyotengeneza Web Apps.", 
-        process: [
-          "Kuelewa mahitaji na kuchora muundo (UI/UX)",
-          "Kutengeneza Frontend & Backend",
-          "Kufanya majaribio (Testing) ya usalama na kasi",
-          "Kupandisha hewani (Deployment) na matengenezo"
-        ], 
-        ctaTitle: "Je, unahitaji Website au System?", 
-        ctaText: "Wasiliana nasi leo tujadili jinsi tunavyoweza kubadilisha wazo lako kuwa mfumo kamili unaofanya kazi."
-      }} 
-      en={{
+      copy={{
         label: "Web Development", 
         title: "Modern Websites & Web Apps.", 
         intro: "We build fast, secure, and highly efficient web applications using world-leading technologies like React, Next.js, Django, Node, and Golang.",
