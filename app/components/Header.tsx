@@ -5,10 +5,10 @@ import { useAppContext } from "../providers";
 
 const copy = {
   sw: {
-    nav: ["Mwanzo", "Teknolojia", "Programu", "Kuhusu", "Mawasiliano"],
+    nav: ["Mwanzo", "Web", "Mobile", "Desktop", "Kuhusu", "Mawasiliano"],
   },
   en: {
-    nav: ["Home", "Technology", "Software", "About", "Contact"],
+    nav: ["Home", "Web", "Mobile", "Desktop", "About", "Contact"],
   },
 };
 
@@ -31,7 +31,7 @@ export default function Header() {
   }
 
   const t = copy[language];
-  const hrefs = ["/", "/technology", "/software", "/about", "/contact"];
+  const hrefs = ["/", "/web", "/mobile", "/desktop", "/about", "/contact"];
 
   return (
     <header className="site-header">

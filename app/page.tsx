@@ -1,49 +1,50 @@
 "use client";
 
 import { useAppContext } from "./providers";
+import TechGrid from "./components/TechGrid";
 
 const copy = {
   sw: {
-    eyebrow: "Mifumo imara. Mawasiliano bila mipaka.",
-    titleA: "Teknolojia inayounganisha",
-    titleB: "viwanda na biashara.",
+    eyebrow: "Wataalamu wa Web na Apps.",
+    titleA: "Tunajenga Programu",
+    titleB: "zinazoleta matokeo.",
     intro:
-      "Fiplex Company Limited huunganisha teknolojia za mawasiliano ya viwandani na programu za kisasa ili kujenga shughuli salama, zenye ufanisi na tayari kukua.",
-    primary: "Chunguza suluhisho",
+      "Fiplex Company Limited ni kampuni inayoongoza kwa kutengeneza websites, mobile apps, na desktop software za kisasa tukitumia teknolojia zinazoaminika duniani.",
+    primary: "Chunguza huduma",
     secondary: "Zungumza nasi",
-    signal: "Mfumo hai",
-    nodeA: "Kiwanda",
-    nodeB: "Cloud",
-    nodeC: "Biashara",
-    strip: ["Mawasiliano ya Viwandani", "Ujumuishaji wa Mifumo", "Programu Maalum", "Miundombinu ya Kidijitali"],
-    solutionsEyebrow: "Uwezo wetu",
-    solutionsTitle: "Daraja moja kati ya mashine, data na watu.",
+    signal: "Code ina-run",
+    nodeA: "Web",
+    nodeB: "Mobile",
+    nodeC: "Desktop",
+    strip: ["Node & Express", "Django", "React & Next.js", "Golang & Gin", "Spring Boot", "Angular & Vue", "React Native", "Flutter", "Electron"],
+    solutionsEyebrow: "Tunachofanya",
+    solutionsTitle: "Ubunifu wa kisasa kwenye kila kifaa.",
     cards: [
-      ["Mawasiliano ya viwandani", "Mitandao na mifumo inayowezesha vifaa, mashine na vituo vya udhibiti kuwasiliana kwa uhakika."],
-      ["Programu za biashara", "Web, mobile na mifumo ya ndani inayotengenezwa kulingana na mchakato halisi wa biashara yako."],
-      ["Ujumuishaji na cloud", "Tunaunganisha mifumo, API na data ili timu zipate taarifa sahihi na kufanya maamuzi kwa wakati."],
+      ["Web Development", "Tunatengeneza websites na web applications zenye kasi na usalama kwa kutumia React, Next.js, Django, Node, Golang, na Vue."],
+      ["Mobile Apps", "Tunajenga mobile apps za Android na iOS zinazofanya kazi vizuri na kwa haraka kwa kutumia React Native na Flutter."],
+      ["Desktop Software", "Tunaandaa programu za Windows, Mac na Linux (Desktop Apps) zinazojitegemea kwa kutumia Electron na teknolojia nyinginezo."],
     ],
     learn: "Jifunze zaidi",
   },
   en: {
-    eyebrow: "Resilient systems. Limitless communication.",
-    titleA: "Technology connecting",
-    titleB: "industry and enterprise.",
+    eyebrow: "Web & App Experts.",
+    titleA: "We build software",
+    titleB: "that drives results.",
     intro:
-      "Fiplex Company Limited brings industrial communication technology and modern software together to build secure, efficient operations ready to scale.",
-    primary: "Explore solutions",
+      "Fiplex Company Limited is a premier software development agency creating modern websites, mobile apps, and desktop applications using world-class technologies.",
+    primary: "Explore services",
     secondary: "Talk to us",
-    signal: "System online",
-    nodeA: "Industry",
-    nodeB: "Cloud",
-    nodeC: "Enterprise",
-    strip: ["Industrial Communications", "Systems Integration", "Custom Software", "Digital Infrastructure"],
+    signal: "Code running",
+    nodeA: "Web",
+    nodeB: "Mobile",
+    nodeC: "Desktop",
+    strip: ["Node & Express", "Django", "React & Next.js", "Golang & Gin", "Spring Boot", "Angular & Vue", "React Native", "Flutter", "Electron"],
     solutionsEyebrow: "What we do",
-    solutionsTitle: "One bridge between machines, data and people.",
+    solutionsTitle: "Modern engineering on every device.",
     cards: [
-      ["Industrial communications", "Networks and systems that enable equipment, machines and control centres to communicate reliably."],
-      ["Enterprise software", "Web, mobile and internal platforms designed around the real operating flow of your business."],
-      ["Integration and cloud", "We connect systems, APIs and data so teams get the right information and act at the right time."],
+      ["Web Development", "We build fast, secure websites and web applications using React, Next.js, Django, Node, Golang, and Vue."],
+      ["Mobile Apps", "We create high-performance Android and iOS mobile applications using React Native and Flutter."],
+      ["Desktop Software", "We engineer cross-platform desktop applications for Windows, Mac, and Linux using Electron and more."],
     ],
     learn: "Learn more",
   },
@@ -83,9 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="capability-strip" aria-label="Capabilities">
-        {t.strip.map((item) => <span key={item}><i />{item}</span>)}
-      </div>
+      <TechGrid />
 
       <section className="solutions" id="solutions">
         <div className="section-heading">

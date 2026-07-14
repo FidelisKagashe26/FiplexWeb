@@ -20,7 +20,7 @@ export default function DetailPage({ sw, en, code }: Props) {
         </a>
         <div className="detail-grid-art" aria-hidden="true">
           <i /><i /><i /><i />
-          <span>{code === "technology" ? "01—COMMS" : code === "software" ? "02—CODE" : "03—FIPLEX"}</span>
+          <span>{code === "web" ? "01—WEB" : code === "mobile" ? "02—MOBILE" : code === "desktop" ? "03—DESKTOP" : "04—FIPLEX"}</span>
         </div>
       </section>
       

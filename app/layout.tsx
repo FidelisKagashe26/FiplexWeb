@@ -7,10 +7,10 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fiplex.co.tz"),
-  title: { default: "Fiplex Company Limited | Industrial Technology & Software", template: "%s | Fiplex Company Limited" },
-  description: "Industrial communication technology, systems integration and custom software development for modern enterprises in Tanzania and beyond.",
-  keywords: ["industrial communication Tanzania", "software development Tanzania", "systems integration", "enterprise technology", "Fiplex Company Limited"],
-  openGraph: { title: "Fiplex Company Limited", description: "Connecting industry and enterprise through resilient communication technology and modern software.", type: "website", locale: "en_TZ" },
+  title: { default: "Fiplex Company Limited | Software & Website Development Agency", template: "%s | Fiplex Company Limited" },
+  description: "We build modern websites, mobile apps, and desktop software using Node, Express, Django, React, Next.js, Golang, Gin, Spring Boot, Angular, Vue, React Native, Electron, and Flutter.",
+  keywords: ["website development", "software development", "React", "Next.js", "Django", "Golang", "Flutter", "React Native", "Fiplex Company Limited", "Tanzania"],
+  openGraph: { title: "Fiplex Company Limited", description: "Top-tier website, mobile, and desktop software development.", type: "website", locale: "en_TZ" },
   robots: { index: true, follow: true },
   other: { "codex-preview": "development" },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
